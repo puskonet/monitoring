@@ -24,4 +24,8 @@ class Dashboard extends CI_Controller {
 		$this->load->view('v_dashboard');
     $this->load->view('home/template/footer.php');;
 	}
+	public function graph()
+	{
+		$this->load->view('v_graph');
+	}
 }
