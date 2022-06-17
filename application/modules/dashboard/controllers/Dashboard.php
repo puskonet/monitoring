@@ -18,11 +18,34 @@ class Dashboard extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+
+
+	public function iqbalnet()
 	{
+		$data['url1'] = 'http://103.170.22.4/iqbalnet/mikrotik-simple-queue-in-out-day.png';
+		$data['url2'] = 'http://103.170.22.4/iqbalnet/mikrotik-simple-queue-in-out-week.png';
+		$data['url3'] = 'http://103.170.22.4/iqbalnet/mikrotik-simple-queue-in-out-month.png';
     $this->load->view('home/template/header.php');
-		$this->load->view('v_dashboard');
+		$this->load->view('v_dashboard',$data);
     $this->load->view('home/template/footer.php');;
+	}
+	public function izul()
+	{
+		$data['url1'] = 'http://103.170.22.4/izul/mikrotik-simple-queue-in-out-day.png';
+		$data['url2'] = 'http://103.170.22.4/izul/mikrotik-simple-queue-in-out-week.png';
+		$data['url3'] = 'http://103.170.22.4/izul/mikrotik-simple-queue-in-out-month.png';
+		$this->load->view('home/template/header.php');
+		$this->load->view('v_dashboard',$data);
+		$this->load->view('home/template/footer.php');;
+	}
+	public function kopitom()
+	{
+		$data['url1'] = 'http://103.170.22.4/kopitom/mikrotik-simple-queue-in-out-day.png';
+		$data['url2'] = 'http://103.170.22.4/kopitom/mikrotik-simple-queue-in-out-week.png';
+		$data['url3'] = 'http://103.170.22.4/kopitom/mikrotik-simple-queue-in-out-month.png';
+		$this->load->view('home/template/header.php');
+		$this->load->view('v_dashboard',$data);
+		$this->load->view('home/template/footer.php');;
 	}
 	public function graph()
 	{
